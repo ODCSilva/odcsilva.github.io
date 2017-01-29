@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        
+        <!-- Google Material Icon Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row margin-top-50px">
+                <h1>Get Directions</h1>
+            </div>
+            <div class="row margin-top-24px">
+                <div class="loader"></div>
+                <div class="col-md-4">
+                    <div class="card card-block box-shadow">
+                        <form>
+                            <fieldset class="form-group">
+                                <label for="origin" class="control-label">Origin</label>
+                                <input type="text" class="form-control" name="origin" id="origin" value="11 Kennedy Drive, Dartmouth, NS" required>
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="dest" class="control-label">Destination</label>
+                                <input type="text" class="form-control" name="dest" id="dest" value="5685 Leeds St, Halifax, NS" required>
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="arrival" class="control-label">Arrival Time</label>
+                                <input type="datetime-local" class="form-control" name="arrival" id="arrival">
+                            </fieldset>
+                            
+                            <input type="button" class="btn btn-primary" value="Get Directions" onclick="showDirections();">
+                        </form>
+                    </div>
+                </div>
+            
+                <div class="col-md-8">
+                    <div class="card card-block hidden" id="results">
+                        <div id="loader"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        
+        
+        <!-- BOOTSTRAP JS -->
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
