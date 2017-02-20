@@ -12,7 +12,8 @@ $(document).ready(function () {
 
         $.ajax({
           type: 'POST',
-          url: req
+          url: req,
+          crossDomain: true
         });
   });
 
