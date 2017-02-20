@@ -15,7 +15,7 @@ $(document).ready(function () {
         //   url: req,
         //   crossDomain: true
         // });
-        $(location).attr('href',url);
+        $(location).attr('href',req);
   });
 
   function fitContent() {
