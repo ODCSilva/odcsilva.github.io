@@ -10,11 +10,12 @@ $(document).ready(function () {
     var scope = "office.onenote_update wl.signin";
     var req = "https://login.live.com/oauth20_authorize.srf?response_type=code&client_id=" + client_id + "&redirect_uri=" + redirect_uri + "&scope=" + scope;
 
-        $.ajax({
-          type: 'POST',
-          url: req,
-          crossDomain: true
-        });
+        // $.ajax({
+        //   type: 'POST',
+        //   url: req,
+        //   crossDomain: true
+        // });
+        $(location).attr('href',url);
   });
 
   function fitContent() {
