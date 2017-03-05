@@ -3,30 +3,50 @@
 <head lang="en">
 	<meta charset="utf-8">
 	<title></title>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	<link rel="stylesheet" href="https://use.fontawesome.com/6d58162afb.css">
 	<!-- Angular Material style sheet -->
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body ng-app="MyPortfolio">
 
-	<div id="sideNavContainer" ng-controller="SidenavController" layout="row" layout-align="end start" ng-cloak>
+	<div ng-controller="SidenavController" layout="row" layout-align="end start" ng-cloak>
 		<md-content>
-			<md-button ng-click="openRightMenu()" class="md-icon-button">
-				<md-icon md-font-set="material-icons">menu</md-icon>
+			<md-button ng-click="openRightMenu()" class="md-icon-button md-primary sidenav-button" aria-label="Expand Sidenav">
+				<md-icon md-font-set="fa" md-font-icon="fa-bars"></md-icon>
 			</md-button>
 		</md-content>
 		<md-sidenav md-component-id="right" class="md-sidenav-right">
-			<md-button href="http://google.com">Google</md-button>
+			<md-content>
+				<md-list ng-controller="SectionController" ng-cloak>
+					<md-list-item class="md-1-line" ng-repeat="section in sections" ng-click="null">
+						<md-icon md-font-set="{{ section.icon_set }}" md-font-icon="{{ section.icon_name }}"></md-icon>
+						<p>{{ section.name }}</p>
+					</md-list-item>
+				</md-list>
+			</md-content>
 		</md-sidenav>
 	</div>
 
-	<!-- <div class="container" ng-app="MyPortfolio">
-	<ul ng-controller="SectionController">
-	<li ng-repeat="section in sections">
-	{{ section.name }}
-</li>
-</ul>
-</div> -->
+	<div layout="row" layout-align="center center" ng-cloak>
+		<img class="logo" src="assets/img/logo.svg">
+	</div>
+
+
+	<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-row-height="fit" md-cols-gt-md="3" md-gutter="30px" md-gutter-gt-sm="8px" flex="50" layout-align="start center">
+		<md-grid-tile class="gray">
+			The
+		</md-grid-tile>
+		<md-grid-tile class="green">
+			Fuck
+		</md-grid-tile>
+		<md-grid-tile class="yellow">
+			is going on
+		</md-grid-tile>
+	</md-grid-list>
+
+	<script src="https://use.fontawesome.com/6d58162afb.js"></script>
 
 	<!-- Angular Material requires Angular.js Libraries -->
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
