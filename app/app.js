@@ -104,7 +104,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial'])
 			name: "Projects",
 			icon_name: "fa-cogs",
 			icon_set: "fa",
-			src: "languages.html"
+			src: "project.html"
 		},
 		{
 			name: "Skills",
@@ -131,31 +131,31 @@ var app = angular.module("MyPortfolio", ['ngMaterial'])
 	$scope.languages = [
 		{
 			name: "C++",
-			icon_name: "devicon-cplusplus-plain"
+			icon_name: "devicon-cplusplus-plain colored"
 		},{
 			name: "C#",
-			icon_name: "devicon-csharp-plain"
+			icon_name: "devicon-csharp-plain colored"
 		},{
 			name: "CSS3",
-			icon_name: "devicon-css3-plain-wordmark"
+			icon_name: "devicon-css3-plain-wordmark colored"
 		},{
 			name: "HTML5",
-			icon_name: "devicon-html5-plain-wordmark"
+			icon_name: "devicon-html5-plain-wordmark colored"
 		},{
 			name: "Java",
-			icon_name: "devicon-java-plain"
+			icon_name: "devicon-java-plain colored"
 		},{
 			name: "JavaScript",
-			icon_name: "devicon-javascript-plain"
+			icon_name: "devicon-javascript-plain colored"
 		},{
 			name: "jQuery",
-			icon_name: "devicon-jquery-plain"
+			icon_name: "devicon-jquery-plain colored"
 		},{
 			name: "PHP",
-			icon_name: "devicon-php-plain"
+			icon_name: "devicon-php-plain colored"
 		},{
 			name: "Python",
-			icon_name: "devicon-python-plain"
+			icon_name: "devicon-python-plain colored"
 		}
 	];
 });

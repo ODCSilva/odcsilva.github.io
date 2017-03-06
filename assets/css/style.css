@@ -21,6 +21,15 @@ p {
 .skill-icon {
 	font-size: 78px;
 }
+.project-icon {
+	font-size: 48px;
+}
+.section-header {
+	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
 .tile-caption {
 	text-align: center;
 	align-content: center;
@@ -32,10 +41,10 @@ p {
 }
 .tile-caption-container {
 	background: none;
-	height: 24px;
+	height: 38px;
 }
 md-icon.md-default-theme, md-icon {
-	color: rgba(255,255,255,1.0) !important;
+	opacity: 1.0 !important;
 }
 .sidenav-button {
 	height: 50px !important;
