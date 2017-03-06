@@ -4,6 +4,10 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+	<!-- Font awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/6d58162afb.css">
 	<!-- Angular Material style sheet -->
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
@@ -19,32 +23,40 @@
 		</md-content>
 		<md-sidenav md-component-id="right" class="md-sidenav-right">
 			<md-content>
-				<md-list ng-controller="SectionController" ng-cloak>
-					<md-list-item class="md-1-line" ng-repeat="section in sections" ng-click="null">
-						<md-icon md-font-set="{{ section.icon_set }}" md-font-icon="{{ section.icon_name }}"></md-icon>
-						<p>{{ section.name }}</p>
+				<md-list>
+					<md-list-item class="md-1-line" ng-repeat="link in links" ng-click="null">
+						<md-icon md-font-set="{{ link.icon_set }}" md-font-icon="{{ link.icon_name }}"></md-icon>
+						<p>{{ link.name }}</p>
 					</md-list-item>
 				</md-list>
 			</md-content>
 		</md-sidenav>
 	</div>
 
-	<div layout="row" layout-align="center center" ng-cloak>
-		<img class="logo" src="assets/img/logo.svg">
+	<div layout="row" ng-cloak layout-align="center start">
+		<div layout="column" flex class="main-container" layout-padding>
+
+			<div flex>
+				<img class="logo" src="assets/img/logo.svg">
+				<md-divider></md-divider>
+			</div>
+
+			<div flex ng-controller="TabController">
+				<md-tabs md-dynamic-height md-border-bottom md-center-tabs md-selected="selectedIndex">
+					<md-tab ng-repeat="section in sections">
+						<md-tab-label>
+							<md-icon md-font-set="{{ section.icon_set }}"
+							md-font-icon="{{ section.icon_name }}"></md-icon>
+							{{section.name}}
+						</md-tab-label>
+						<md-tab-body>
+							<div ng-include src='section.src'></div>
+						</md-tab-body>
+					</md-tab>
+				</md-tabs>
+			</div>
+		</div>
 	</div>
-
-
-	<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="3" md-row-height="fit" md-cols-gt-md="3" md-gutter="30px" md-gutter-gt-sm="8px" flex="50" layout-align="start center">
-		<md-grid-tile class="gray">
-			The
-		</md-grid-tile>
-		<md-grid-tile class="green">
-			Fuck
-		</md-grid-tile>
-		<md-grid-tile class="yellow">
-			is going on
-		</md-grid-tile>
-	</md-grid-list>
 
 	<script src="https://use.fontawesome.com/6d58162afb.js"></script>
 
@@ -53,12 +65,12 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
 
 	<!-- Angular Material Library -->
 	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
 	<script src="app/app.js"></script>
-	<script src="app/controllers/SectionController.js"></script>
-	<script src="app/controllers/SidenavController.js"></script>
+	<script src="app/controllers/SkillController.js"></script>
 </body>
 </html>
