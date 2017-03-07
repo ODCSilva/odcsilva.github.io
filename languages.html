@@ -1,13 +1,43 @@
-<h1 md-colors="{color:'primary'}" class="section-header">Programming Languages</h1>
-<div ng-controller="LanguageController">
-	<md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-row-height="78px" md-cols-gt-md="6" md-gutter="30px" md-gutter-gt-sm="8px">
-		<md-grid-tile ng-repeat="lang in languages" md-colspan="1" md-rowspan="2" md-whiteframe="{{height}}"
-		ng-init="height = -1" ng-mouseenter="height = 12" ng-mouseleave="height = -1">
-			<md-icon class="skill-icon" md-font-icon="{{lang.icon_name}}"
-			alt="{{lang.name}}" aria-label="{{lang.name}}"></md-icon>
-			<md-grid-tile-footer class="tile-caption-container">
-				<div class="tile-caption">{{lang.name}}</div>
-			</md-grid-tile-footer>
-		</md-grid-tile>
-	</md-grid-list>
+<div flex layout="column">
+	<div flex ng-controller="LanguageController">
+		<h1 md-colors="{color:'primary'}" class="section-header">Programming_Languages_</h1>
+		<md-list flex layout="row" layout-wrap layout-padding>
+			<md-list-item class="md-2-line" ng-repeat="lang in languages" ng-click="null" flex="33">
+				<md-icon class="project-icon" md-font-icon="{{lang.icon_name}}"></md-icon>
+				<div class="md-list-item-text" layout="column">
+					<h3>{{lang.name}}</h3>
+				</div>
+			</md-list-item>
+		</md-list>
+	</div>
+	<div flex ng-controller="SkillController">
+		<h1 md-colors="{color:'primary'}" class="section-header">Skills_</h1>
+		<div flex layout="column" ng-repeat="cat in skillCategories" layout-padding>
+			<md-subheader class="md-no-sticky" flex="100">{{cat.name}}</md-subheader>
+			<md-divider flex></md-divider>
+			<md-list flex layout="row" layout-wrap layout-padding>
+				<md-list-item class="md-2-line" ng-repeat="skill in cat.skills" ng-click="null" flex="25">
+					<md-icon class="project-icon" md-font-icon="{{skill.icon_name}}"></md-icon>
+					<div class="md-list-item-text" layout="column">
+						<h3>{{skill.name}}</h3>
+					</div>
+				</md-list-item>
+			</md-list>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <div ng-controller="LanguageController">
+<md-grid-list md-cols-xs="2" md-cols-sm="3" md-cols-md="6" md-row-height="78px" md-cols-gt-md="6" md-gutter="30px" md-gutter-gt-sm="8px">
+<md-grid-tile ng-repeat="lang in languages" md-colspan="1" md-rowspan="2" md-whiteframe="{{height}}"
+ng-init="height = -1" ng-mouseenter="height = 12" ng-mouseleave="height = -1">
+<md-icon class="skill-icon" md-font-icon="{{lang.icon_name}}"
+alt="{{lang.name}}" aria-label="{{lang.name}}"></md-icon>
+<md-grid-tile-footer class="tile-caption-container">
+<div class="tile-caption">{{lang.name}}</div>
+</md-grid-tile-footer>
+</md-grid-tile>
+</md-grid-list> -->
 </div>

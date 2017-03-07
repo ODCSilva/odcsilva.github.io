@@ -95,7 +95,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial'])
 			src: "about.html"
 		},
 		{
-			name: "Programming Languages",
+			name: "Programming Languages & Skills",
 			icon_name: "fa-code",
 			icon_set: "fa",
 			src: "languages.html"
@@ -105,12 +105,6 @@ var app = angular.module("MyPortfolio", ['ngMaterial'])
 			icon_name: "fa-cogs",
 			icon_set: "fa",
 			src: "project.html"
-		},
-		{
-			name: "Skills",
-			icon_name: "fa-wrench",
-			icon_set: "fa",
-			src: "languages.html"
 		},
 		{
 			name: "Resume",
