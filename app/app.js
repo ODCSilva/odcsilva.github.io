@@ -116,7 +116,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial'])
 			name: "Contact",
 			icon_name: "fa-address-card-o",
 			icon_set: "fa",
-		    src: "languages.html"
+		    src: "contact.html"
 		}
 	];
 })

@@ -1,6 +1,6 @@
 <div flex layout="column">
 	<div flex ng-controller="LanguageController">
-		<h1 md-colors="{color:'primary'}" class="section-header">Programming_Languages_</h1>
+		<h1 md-colors="{color:'primary'}" class="section-header">Programming Languages</h1>
 		<md-list flex layout="row" layout-wrap layout-padding>
 			<md-list-item class="md-2-line" ng-repeat="lang in languages" ng-click="null" flex="33">
 				<md-icon class="project-icon" md-font-icon="{{lang.icon_name}}"></md-icon>
@@ -11,7 +11,7 @@
 		</md-list>
 	</div>
 	<div flex ng-controller="SkillController">
-		<h1 md-colors="{color:'primary'}" class="section-header">Skills_</h1>
+		<h1 md-colors="{color:'primary'}" class="section-header">Skills</h1>
 		<div flex layout="column" ng-repeat="cat in skillCategories" layout-padding>
 			<md-subheader class="md-no-sticky" flex="100">{{cat.name}}</md-subheader>
 			<md-divider flex></md-divider>
