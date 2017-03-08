@@ -7,6 +7,17 @@ html {
 	margin: auto;
 	margin-bottom: 12px;
 }
+.contact-link {
+	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif !important;
+	text-decoration: none;
+	font-weight: 300 !important;
+	font-size: 1.5em;
+}
+.contact-icon {
+	margin-top: -7px;
+    font-size: 20px !important;
+    color: rgba(255,255,255,1.0);
+}
 p {
 	font-family: inherit !important;
 	font-weight: 300 !important;
@@ -16,7 +27,7 @@ p {
 }
 .main-container {
 	width:100%;
-	max-width: 1200px;
+	max-width: 1024px;
 }
 .skill-icon {
 	font-size: 78px;
@@ -50,29 +61,4 @@ md-icon.md-default-theme, md-icon {
 	height: 50px !important;
 	width: 50px !important;
 	font-size: 36px !important;
-}
-
-.view-animate-container {
-	position:relative;
-}
-.view-animate {
-	padding:10px;
-}
-.view-animate.ng-enter, .view-animate.ng-leave {
-	transition:all cubic-bezier(.35,0,.25,1) 0.5s;
-	display:block;
-    width:100%;
-    position:absolute;
-    left:0;
-
-}
-
-.view-animate.ng-enter {
-	left:100%;
-}
-.view-animate.ng-enter.ng-enter-active {
-	left:0;
-}
-.view-animate.ng-leave.ng-leave-active {
-	left:-100%;
 }
