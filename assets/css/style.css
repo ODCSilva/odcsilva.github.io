@@ -44,6 +44,13 @@ p {
 	font-size: 1.8em;
 	text-transform: uppercase;
 }
+.section-header.subheader {
+	font-size: 1.3em;
+}
+.job-title {
+	font-weight: bold;
+	font-size: 1.1em;
+}
 .tile-caption {
 	text-align: center;
 	align-content: center;

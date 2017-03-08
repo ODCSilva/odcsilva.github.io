@@ -73,5 +73,5 @@ app.controller("SkillController", function($scope) {
 				icon_name: "devicon-github-plain colored"
 			}]
 		}
-]
+	];
 });

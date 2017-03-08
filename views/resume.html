@@ -1,0 +1,28 @@
+<h1 md-colors="{color:'primary'}" class="section-header">Contact Information</h1>
+
+<h2 md-colors="{color:'primary'}" class="section-header subheader">Experience</h2>
+
+<div ng-controller="JobController">
+	<div layout="row" layout-wrap ng-repeat="job in jobs">
+		<div flex="50">
+			<span class="job-title">{{job.title}}</span>
+		</div>
+		<div flex="50" style="text-align:right">
+			{{job.dates}}
+		</div>
+		<div flex="50">
+			<em>{{job.company}}</em>
+		</div>
+		<div flex="50" style="text-align:right">
+			<em>{{job.location}}</em>
+		</div>
+		<div flex="100">
+			<ul>
+				<li ng-repeat="b in job.bullets">
+					{{b.text}}
+				</li>
+			</ul>
+		</div>
+		<md-divider md-inset></md-divider>
+	</div>
+</div>
