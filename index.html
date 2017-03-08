@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<title></title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:300|Roboto:300,400,400i,500,700" rel="stylesheet">
@@ -18,7 +19,7 @@
 	<div ng-controller="SidenavController" layout="row" layout-align="end start" ng-cloak>
 		<md-content>
 			<md-button ng-click="openRightMenu()" class="md-icon-button md-primary sidenav-button" aria-label="Expand Sidenav">
-				<md-icon md-font-set="fa" md-font-icon="fa-bars"></md-icon>
+				<md-icon hide show-xs md-font-set="fa" md-font-icon="fa-bars"></md-icon>
 			</md-button>
 		</md-content>
 		<md-sidenav md-component-id="right" class="md-sidenav-right">
@@ -42,12 +43,15 @@
 			</div>
 
 			<div flex ng-controller="TabController">
-				<md-tabs md-dynamic-height md-border-bottom md-center-tabs md-selected="selectedIndex">
+				<md-tabs md-dynamic-height md-border-bottom md-center-tabs
+				md-swipe-content md-selected="selectedIndex">
 					<md-tab ng-repeat="section in sections">
 						<md-tab-label>
 							<md-icon md-font-set="{{ section.icon_set }}"
 							md-font-icon="{{ section.icon_name }}"></md-icon>
-							{{section.name}}
+							<span flex hide-xs>
+								{{section.name}}
+							</span>
 						</md-tab-label>
 						<md-tab-body>
 							<div ng-include src='section.src'></div>
