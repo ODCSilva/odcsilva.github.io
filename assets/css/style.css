@@ -2,7 +2,7 @@ html {
 	font-family: 'Open Sans', Roboto, sans-serif;
 }
 .logo {
-	width: 400px;
+	max-width: 400px;
 	display: block;
 	margin: auto;
 	margin-bottom: 12px;
@@ -51,32 +51,20 @@ md-icon.md-default-theme, md-icon {
 	width: 50px !important;
 	font-size: 36px !important;
 }
+
 .view-animate-container {
 	position:relative;
-	height:100px!important;
-	background:white;
-	border:1px solid black;
-	height:40px;
-	overflow:hidden;
 }
-
 .view-animate {
 	padding:10px;
 }
-
 .view-animate.ng-enter, .view-animate.ng-leave {
-	transition:all ease-in 1.5s;
-
+	transition:all cubic-bezier(.35,0,.25,1) 0.5s;
 	display:block;
-	width:100%;
-	border-left:1px solid black;
+    width:100%;
+    position:absolute;
+    left:0;
 
-	position:absolute;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	padding:10px;
 }
 
 .view-animate.ng-enter {
