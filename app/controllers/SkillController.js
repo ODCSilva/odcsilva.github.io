@@ -1,4 +1,5 @@
-app.controller("SkillController", function($scope) {
+app.controller("SkillController", ['$scope', '$mdMedia', function($scope, $mdMedia) {
+    $scope.$mdMedia = $mdMedia;
 	$scope.skillCategories = [
 		{
 			name: "Databases",
@@ -55,7 +56,7 @@ app.controller("SkillController", function($scope) {
 				icon_name: "devicon-android-plain colored"
 			},{
 				name: "Linux",
-				icon_name: "devicon-linux-plain colored"
+				icon_name: "devicon-linux-plain"
 			},{
 				name: "Windows",
 				icon_name: "devicon-windows8-original colored"
@@ -74,4 +75,4 @@ app.controller("SkillController", function($scope) {
 			}]
 		}
 	];
-});
+}]);

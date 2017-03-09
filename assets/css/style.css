@@ -1,5 +1,9 @@
 html {
 	font-family: 'Open Sans', Roboto, sans-serif;
+	font-weight: 300;
+}
+.align-right {
+	text-align: right;
 }
 .logo {
 	max-width: 400px;
@@ -7,13 +11,10 @@ html {
 	margin: auto;
 	margin-bottom: 12px;
 }
-.contact-link {
-	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif !important;
-	text-decoration: none;
+.contact-info li, .contact-info a {
+	font-family: inherit;
 	font-weight: 300 !important;
-	font-size: 1.5em;
-}
-.contact-link:visited {
+	font-size: 1.1em;
 	color: inherit;
 }
 .contact-icon {
@@ -21,9 +22,15 @@ html {
     font-size: 20px !important;
     color: rgba(255,255,255,1.0);
 }
-p {
+.contact-info {
+	list-style-type: none;
+}
+.experience-list {
+	font-weight: 300;
+}
+.about-section p {
 	font-family: inherit !important;
-	font-weight: 300 !important;
+	font-weight: 300;
 }
 .md-tab {
 	font-family: inherit !important;
@@ -46,6 +53,13 @@ p {
 }
 .section-header.subheader {
 	font-size: 1.3em;
+}
+.section-header.subsubheader {
+	font-size: 1.1em;
+}
+.collapsed-skill-caption {
+	display: block;
+	height: 48px;
 }
 .job-title {
 	font-weight: bold;
