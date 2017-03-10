@@ -32,9 +32,9 @@ html {
 .experience-list {
 	font-weight: 300;
 }
-.about-section p {
+.about-section p, .md-dialog-content p {
 	font-family: inherit !important;
-	font-weight: 300;
+	font-weight: 300 !important;
 }
 .md-tab {
 	font-family: inherit !important;
@@ -43,11 +43,20 @@ html {
 	width:100%;
 	max-width: 1024px;
 }
+.main-container.mc-dialog {
+	margin: 12px;
+}
 .skill-icon {
 	font-size: 78px;
 }
 .project-icon {
 	font-size: 48px;
+}
+.screenshot {
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 12px;
 }
 .section-header {
 	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
