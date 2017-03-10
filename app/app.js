@@ -17,13 +17,13 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		selectedIndex: 1
 	})
 	.when('/projects', {
-		selectedIndex: 1
+		selectedIndex: 2
 	})
 	.when('/resume', {
-		selectedIndex: 1
+		selectedIndex: 3
 	})
 	.when('/contact', {
-		selectedIndex: 1
+		selectedIndex: 4
 	})
 })
 .controller("SectionController", function($scope) {
@@ -102,26 +102,26 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		$mdSidenav('right').toggle();
 	};
 })
-.controller("TabController", function($scope, $location) {
-	$scope.selectedIndex = 0;
+.controller("TabController", function($rootScope, $scope, $location) {
+	$scope.selectedIndex = $rootScope.selectedIndex;
 
 	$scope.$watch('selectedIndex', function(newIndex, oldIndex) {
 		switch(newIndex) {
 			case 0:
-				$location.url('/');
-				break;
+			$location.url('/');
+			break;
 			case 1:
-				$location.url('/skills');
-				break;
+			$location.url('/skills');
+			break;
 			case 2:
-				$location.url('/projects');
-				break;
+			$location.url('/projects');
+			break;
 			case 3:
-				$location.url('/resume');
-				break;
+			$location.url('/resume');
+			break;
 			case 4:
-				$location.url('/contact');
-				break;
+			$location.url('/contact');
+			break;
 		}
 	});
 
@@ -149,7 +149,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		{
 			name: "Contact",
 			icon_name: "fa fa-address-card-o",
-		    src: "views/contact.html"
+			src: "views/contact.html"
 		}
 	];
 })
@@ -296,4 +296,46 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 			location: "Bayamón, Puerto Rico, United States",
 		}
 	];
-}]);
+}])
+.controller("ProjectController", function ($scope, $mdDialog) {
+	$scope.showDialog = showDialog;
+	$scope.projects = [
+		{
+			name: "Maze Solver",
+			short_description: "A C++ console application that solves ASCII mazes from text files using stacks.",
+			long_description: "This is a C++ console application project I coded for the Data Structures course."
+			+"It uses a stack to keep track navigated positions and 'pops' the nodes if it encounters a dead end,"
+			+"retracing its patch back to the nearest intersection. Once there it chooses a new direction to"
+			+" navigate, hopefully towards the exit.",
+			screenshots: [
+				{ src: "assets/img/projects/maze-solver/1.jpg"},
+				{ src: "assets/img/projects/maze-solver/2.jpg"}
+			],
+			tags: "",
+			github: "https://github.com/ODCSilva/Maze-Solver",
+		}
+	];
+
+	function showDialog($event, $project) {
+
+		var parentEl = angular.element(document.body);
+		$mdDialog.show({
+			parent: parentEl,
+			targetEvent: $event,
+			templateUrl: "views/templates/projdialog.templ.html",
+			locals: {
+				project: $project
+			},
+			controller: DialogController,
+			clickOutsideToClose:true
+		});
+
+		function DialogController($scope, $mdDialog, project) {
+			$scope.project = project;
+			$scope.closeDialog = function() {
+				$mdDialog.hide();
+			}
+		}
+	}
+
+});
