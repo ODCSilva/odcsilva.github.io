@@ -52,11 +52,13 @@ html {
 .project-icon {
 	font-size: 48px;
 }
+.resume-panel {
+	margin-bottom: 16px;
+}
 .screenshot {
 	display: block;
 	height: 100%;
 	width: 100%;
-	margin: 12px;
 }
 .section-header {
 	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
@@ -103,4 +105,13 @@ md-icon.md-default-theme, md-icon {
 	height: 50px !important;
 	width: 50px !important;
 	font-size: 36px !important;
+}
+h2.ng-binding.flex {
+	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.0em;
+	text-transform: uppercase;
+}
+a.md-button.md-ink-ripple {
+	color: rgb(255,255,255) !import;
 }

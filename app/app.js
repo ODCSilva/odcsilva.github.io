@@ -276,7 +276,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 				{ name: "Rich Internet Applications", code: "WEBD 2000"},
 				{ name: "Windows Programming - C#", code: "PROG 2500"},
 				{ name: "Development Process Controls", code: "INFT 4001"},
-				{ name: "Programmin Capstone", code: "INFT 3000"}
+				{ name: "Programming Capstone", code: "INFT 3000"}
 			]
 		},
 		{
@@ -297,16 +297,13 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		}
 	];
 }])
-.controller("ProjectController", function ($scope, $mdDialog) {
+.controller("ProjectController", ['$scope', '$mdDialog', '$mdMedia', function ($scope, $mdDialog, $mdMedia) {
+	$scope.$mdMedia = $mdMedia;
 	$scope.showDialog = showDialog;
 	$scope.projects = [
 		{
 			name: "Maze Solver",
-			short_description: "A C++ console application that solves ASCII mazes from text files using stacks.",
-			long_description: "This is a C++ console application project I coded for the Data Structures course."
-			+"It uses a stack to keep track navigated positions and 'pops' the nodes if it encounters a dead end,"
-			+"retracing its patch back to the nearest intersection. Once there it chooses a new direction to"
-			+" navigate, hopefully towards the exit.",
+			description: "A C++ console application that solves ASCII mazes from text files using stacks.",
 			screenshots: [
 				{ src: "assets/img/projects/maze-solver/1.jpg"},
 				{ src: "assets/img/projects/maze-solver/2.jpg"}
@@ -338,4 +335,4 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		}
 	}
 
-});
+}]);
