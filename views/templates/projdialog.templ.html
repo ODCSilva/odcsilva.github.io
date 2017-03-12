@@ -1,12 +1,10 @@
-<md-dialog aria-label="{{project.name}}" class="main-container mc-dialog">
-	<md-toolbar>
-		<div class="md-toolbar-tools">
-			<md-button class="md-icon-button" ng-click="cancel()">
-				<md-icon md-font-icon="fa fa-times" aria-label="Close dialog" class="exit-icon"></md-icon>
-			</md-button>
-		</div>
-	</md-toolbar>
+<md-dialog aria-label="Screenshot" class="main-container mc-dialog">
 	<md-dialog-content>
-		<img ng-src="{{img.src}}" />
+		<md-button class="md-icon-button close" md-colors="{backgroundColor:'background'}" aria-label="Close dialog">
+			<md-icon md-font-icon="fa fa-times"></md-icon>
+		</md-button>
+		<md-content>
+			<img ng-src="{{img.src}}" class="screenshot-full"/>
+		</md-content>
 	</md-dialog-content>
 </md-dialog>

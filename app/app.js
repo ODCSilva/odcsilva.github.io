@@ -328,7 +328,7 @@ function ($scope, $mdDialog, $mdMedia, LanguageService) {
 	$scope.projects = [
 		{
 			name: "Maze Solver",
-			description: "A C++ console application that solves ASCII mazes from text files using stacks.",
+			description: "A console application that solves ASCII mazes from text files using stacks.",
 			languages: [LanguageService.cpp],
 			platforms: "Windows",
 			screenshots: [
@@ -342,6 +342,9 @@ function ($scope, $mdDialog, $mdMedia, LanguageService) {
 			description: "A web app that allows you to create, read, update, and delete notes using the Microsoft's OneNote REST API.",
 			languages: [LanguageService.html5, LanguageService.css3, LanguageService.js, LanguageService.jquery],
 			platforms: "Web",
+			screenshots: [
+				{ src: "assets/img/projects/note2/1.jpg"}
+			],
 			github: "https://github.com/ODCSilva/Note2",
 			demo: "demos/note2/"
 		}

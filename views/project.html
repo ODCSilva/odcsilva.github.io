@@ -1,34 +1,30 @@
 <h1 md-colors="{color:'primary'}" class="md-display-1 section-header">Projects</h1>
 <div ng-controller="ProjectController">
-	<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel" layout-padding>
-		<div flex="100">
-			<md-toolbar>
-				<div class="md-toolbar-tools">
-					<h2 md-truncate flex>{{p.name}}</h2>
-					<md-button ng-href="{{p.github}}" target="_blank">
-						View on GitHub
-						<md-icon md-font-icon="fa fa-github colored"></md-icon>
-					</md-button>
-				</div>
-			</md-toolbar>
-		</div>
-		<div flex="50">
-			Platforms: <em>{{p.platforms}}</em>
-		</div>
-		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
-			Languages: <span ng-repeat="lang in p.languages">{{lang.name}}{{$last ? '' : ', '}}</span>
-		</div>
-		<div flex="100">
-			<p>
-				{{p.description}}
-			</p>
-		</div>
-		<div flex="100">
-			<div layout="row" layout-wrap>
-				<div class="md-padding" flex="50" flex-xs="100" ng-repeat="s in p.screenshots">
-					<img class="screenshot" ng-src="{{s.src}}" md-ink-ripple ng-click="showDialog($event,s)"/>
-				</div>
+	<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel">
+		<div flex="100" class="project-frame" md-colors="{backgroundColor:'grey-800'}">
+			<div flex="100" style="position: relative">
+				<a ng-href="{{p.github}}" target="_blank" style="position: absolute; top: 0; right: 0">
+					<img src="assets/img/view-on-github-ribbon.png"/>
+				</a>
+				<md-toolbar class="project">
+					<div class="md-toolbar-tools project">
+						<h2 md-truncate flex>{{p.name}}</h2>
+					</div>
+				</md-toolbar>
+			</div>
+			<div flex="100" class="md-padding">
+				<span md-colors="{color:'primary'}">Platforms:</span> <em>{{p.platforms}}</em><br />
+				<span md-colors="{color:'primary'}">Languages:</span> <span ng-repeat="lang in p.languages">{{lang.name}}{{$last ? '' : ', '}}</span><br />
+				<span md-colors="{color:'primary'}">Description:</span> {{p.description}}
+			</div>
+			<div flex="100" class="md-padding">
+				<md-grid-list md-cols="4" md-cols-md="4" md-cols-xs="2" md-cols-gt-md="4" md-row-height="1:1" md-gutter="12px">
+					<md-grid-tile class="screenshot-container" md-rowspan="1" md-colspan="1" ng-repeat="s in p.screenshots">
+						<img class="screenshot" ng-src="{{s.src}}" md-ink-ripple ng-click="showDialog($event,s)"/>
+					</md-grid-tile>
+				</md-grid-list>
 			</div>
 		</div>
+
 	</div>
 </div>

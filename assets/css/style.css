@@ -26,9 +26,11 @@ html {
 .contact-info {
 	list-style-type: none;
 }
-.exit-icon {
-	font-size: 24px;
-	color: rgba(255,255,255,1.0);
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
 }
 .experience-list {
 	font-weight: 300;
@@ -47,6 +49,19 @@ html {
 .main-container.mc-dialog {
 	margin: 12px;
 }
+.project-frame {
+	border: 1px solid rgba(255,255,255,0.12);
+	border-radius: 4px;
+}
+md-toolbar.project._md._md-toolbar-transitions {
+	min-height: 0px;
+	background-color: rgba(0,0,0,0);
+	color: inherit;
+}
+div.md-toolbar-tools.project {
+	max-height: 52px;
+	height: 52px;
+}
 .skill-icon {
 	font-size: 78px;
 }
@@ -57,7 +72,16 @@ html {
 	margin-bottom: 16px;
 }
 .screenshot {
-	width: 100%;
+	width: 95%;
+}
+.screenshot-full {
+	display: block;
+	margin: 0 auto;
+}
+.screenshot-container {
+	border: 1px solid rgba(255,255,255,0.12);
+	background-color: rgb(24,24,24);
+	border-radius: 4px;
 }
 .section-header {
 	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
@@ -105,10 +129,9 @@ md-icon.md-default-theme, md-icon {
 	font-size: 36px !important;
 }
 h2.ng-binding.flex {
-	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;
-	font-weight: 300;
-	font-size: 1.0em;
-	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.1em;
+	/*text-transform: uppercase;*/
 }
 a.md-button.md-ink-ripple {
 	color: rgb(255,255,255) !import;
