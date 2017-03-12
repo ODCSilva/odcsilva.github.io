@@ -1,31 +1,12 @@
 <md-dialog aria-label="{{project.name}}" class="main-container mc-dialog">
 	<md-toolbar>
 		<div class="md-toolbar-tools">
-			<h2 class="section-header subheader">{{project.name}}</h2>
-			<span flex></span>
 			<md-button class="md-icon-button" ng-click="cancel()">
 				<md-icon md-font-icon="fa fa-times" aria-label="Close dialog" class="exit-icon"></md-icon>
 			</md-button>
 		</div>
 	</md-toolbar>
-
 	<md-dialog-content>
-		<div class="md-dialog-content">
-			<p>
-				{{project.long_description}}
-			</p>
-			<md-divider></md-divider>
-
-			<md-list>
-				<md-list-item ng-repeat="ss in project.screenshots" >
-					<img ng-src="{{ss.src}}" class="screenshot"/>
-				</md-list-item>
-			</md-list>
-
-			<md-button class="md-raised md-primary" ng-href="{{project.github}}" target="_blank">
-				<md-icon md-font-icon="fa fa-github" aria-label="View on GitHub" style="font-size: 36px"></md-icon>
-				View on GitHub
-			</md-button>
-		</div>
+		<img ng-src="{{img.src}}" />
 	</md-dialog-content>
 </md-dialog>

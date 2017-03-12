@@ -6,8 +6,7 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 	.accentPalette('orange')
 	.backgroundPalette('grey', {
 		'default':'900'
-	})
-	.dark();
+	}).dark();
 
 	$routeProvider
 	.when('/', {
@@ -25,6 +24,59 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 	.when('/contact', {
 		selectedIndex: 4
 	})
+})
+.service('LanguageService', function() {
+	return {
+		cpp: {
+			name: "C++",
+			icon_name: "devicon-cplusplus-plain colored"
+		},
+		csharp: {
+			name: "C#",
+			icon_name: "devicon-csharp-plain colored"
+		},
+		css3: {
+			name: "CSS3",
+			icon_name: "devicon-css3-plain-wordmark colored"
+		},
+		html5: {
+			name: "HTML5",
+			icon_name: "devicon-html5-plain-wordmark colored"
+		},
+		java: {
+			name: "Java",
+			icon_name: "devicon-java-plain colored"
+		},
+		js: {
+			name: "JavaScript",
+			icon_name: "devicon-javascript-plain colored"
+		},
+		jquery: {
+			name: "jQuery",
+			icon_name: "devicon-jquery-plain colored"
+		},
+		php: {
+			name: "PHP",
+			icon_name: "devicon-php-plain colored"
+		},
+		python: {
+			name: "Python",
+			icon_name: "devicon-python-plain colored"
+		},
+		all: function() {
+			return [
+				this.cpp,
+				this.csharp,
+				this.css3,
+				this.html5,
+				this.js,
+				this.java,
+				this.jquery,
+				this.php,
+				this.python
+			];
+		}
+	};
 })
 .controller("SectionController", function($scope) {
 	$scope.sections = [
@@ -153,38 +205,10 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		}
 	];
 })
-.controller("LanguageController", ['$scope', '$mdMedia', function ($scope, $mdMedia) {
+.controller("LanguageController", ['$scope', '$mdMedia', 'LanguageService',
+function ($scope, $mdMedia, LanguageService) {
 	$scope.$mdMedia = $mdMedia;
-	$scope.languages = [
-		{
-			name: "C++",
-			icon_name: "devicon-cplusplus-plain colored"
-		},{
-			name: "C#",
-			icon_name: "devicon-csharp-plain colored"
-		},{
-			name: "CSS3",
-			icon_name: "devicon-css3-plain-wordmark colored"
-		},{
-			name: "HTML5",
-			icon_name: "devicon-html5-plain-wordmark colored"
-		},{
-			name: "Java",
-			icon_name: "devicon-java-plain colored"
-		},{
-			name: "JavaScript",
-			icon_name: "devicon-javascript-plain colored"
-		},{
-			name: "jQuery",
-			icon_name: "devicon-jquery-plain colored"
-		},{
-			name: "PHP",
-			icon_name: "devicon-php-plain colored"
-		},{
-			name: "Python",
-			icon_name: "devicon-python-plain colored"
-		}
-	];
+	$scope.languages = LanguageService.all();
 }])
 .controller("ExperienceController", ['$scope', '$mdMedia', function ($scope, $mdMedia) {
 	$scope.$mdMedia = $mdMedia;
@@ -297,23 +321,25 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 		}
 	];
 }])
-.controller("ProjectController", ['$scope', '$mdDialog', '$mdMedia', function ($scope, $mdDialog, $mdMedia) {
+.controller("ProjectController", ['$scope', '$mdDialog', '$mdMedia', 'LanguageService',
+function ($scope, $mdDialog, $mdMedia, LanguageService) {
 	$scope.$mdMedia = $mdMedia;
 	$scope.showDialog = showDialog;
 	$scope.projects = [
 		{
 			name: "Maze Solver",
 			description: "A C++ console application that solves ASCII mazes from text files using stacks.",
+			languages: LanguageService.cpp,
+			platforms: "Windows",
 			screenshots: [
 				{ src: "assets/img/projects/maze-solver/1.jpg"},
 				{ src: "assets/img/projects/maze-solver/2.jpg"}
 			],
-			tags: "",
 			github: "https://github.com/ODCSilva/Maze-Solver",
 		}
 	];
 
-	function showDialog($event, $project) {
+	function showDialog($event, $img) {
 
 		var parentEl = angular.element(document.body);
 		$mdDialog.show({
@@ -321,14 +347,14 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 			targetEvent: $event,
 			templateUrl: "views/templates/projdialog.templ.html",
 			locals: {
-				project: $project
+				img: $img
 			},
 			controller: DialogController,
 			clickOutsideToClose:true
 		});
 
-		function DialogController($scope, $mdDialog, project) {
-			$scope.project = project;
+		function DialogController($scope, $mdDialog, img) {
+			$scope.img = img;
 			$scope.closeDialog = function() {
 				$mdDialog.hide();
 			}

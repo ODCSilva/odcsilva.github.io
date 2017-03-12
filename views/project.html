@@ -1,28 +1,35 @@
-<h1 md-colors="{color:'primary'}" class="section-header">Projects</h1>
+<h1 md-colors="{color:'primary'}" class="md-display-1 section-header">Projects</h1>
 <div ng-controller="ProjectController">
-	<div layout="column" layout-wrap ng-repeat="proj in projects" class="resume-panel">
-		<md-toolbar md-colors="{backgroundColor:'grey-800'}" class="md-background">
+	<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel" layout-padding>
+		<md-toolbar md-colors="{backgroundColor: 'background'}">
 			<div class="md-toolbar-tools">
-				<h2 md-truncate flex>{{proj.name}}</h2>
-				<md-button ng-href="{{proj.github}}" target="_blank">
+				<h2>
+					<span>{{p.name}}</span>
+					({{p.languages.name}})
+				</h2>
+				<md-button class="md-button" ng-href="{{p.github}}" target="_blank">
 					View on GitHub
-					<md-icon md-colors="{color:'grey-50'}" md-font-icon="fa fa-github" aria-label="View on GitHub" style="font-size: 36px"></md-icon>
+					<md-icon md-font-icon="fa fa-github colored"></md-icon>
 				</md-button>
 			</div>
 		</md-toolbar>
-		<div flex="100" class="md-padding">
+		<div flex="100">
+			Platforms: <em>{{p.platforms}}</em>
+		</div>
+		<div flex="100">
 			<p>
-				{{proj.description}}
+				{{p.description}}
 			</p>
 		</div>
-		<div flex>
+		<div flex="100">
 			<div layout="row" layout-wrap>
-				<md-list flex>
-					<md-list-item ng-repeat="ss in proj.screenshots" ng-click="null" flex="20">
-						<img ng-src="{{ss.src}}" class="screenshot"/>
-					</md-list-item>
-				</md-list>
+				<div class="md-padding" flex="50" flex-xs="100" ng-repeat="s in p.screenshots">
+					<img class="screenshot" ng-src="{{s.src}}" md-ink-ripple ng-click="showDialog($event,s)"/>
+				</div>
 			</div>
+		</div>
+		<div flex="100">
+			<md-divider></md-divider>
 		</div>
 	</div>
 </div>
