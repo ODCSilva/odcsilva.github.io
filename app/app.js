@@ -329,13 +329,20 @@ function ($scope, $mdDialog, $mdMedia, LanguageService) {
 		{
 			name: "Maze Solver",
 			description: "A C++ console application that solves ASCII mazes from text files using stacks.",
-			languages: LanguageService.cpp,
+			languages: [LanguageService.cpp],
 			platforms: "Windows",
 			screenshots: [
 				{ src: "assets/img/projects/maze-solver/1.jpg"},
 				{ src: "assets/img/projects/maze-solver/2.jpg"}
 			],
 			github: "https://github.com/ODCSilva/Maze-Solver",
+		},
+		{
+			name: "Note2",
+			description: "A web app that allows you to create, read, update, and delete notes using the Microsoft's OneNote REST API.",
+			languages: [LanguageService.html5, LanguageService.css3, LanguageService.js, LanguageService.jquery],
+			platforms: "Web",
+			github: "https://github.com/ODCSilva/Note2"
 		}
 	];
 

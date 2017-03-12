@@ -1,20 +1,22 @@
 <h1 md-colors="{color:'primary'}" class="md-display-1 section-header">Projects</h1>
 <div ng-controller="ProjectController">
 	<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel" layout-padding>
-		<md-toolbar md-colors="{backgroundColor: 'background'}">
-			<div class="md-toolbar-tools">
-				<h2>
-					<span>{{p.name}}</span>
-					({{p.languages.name}})
-				</h2>
-				<md-button class="md-button" ng-href="{{p.github}}" target="_blank">
-					View on GitHub
-					<md-icon md-font-icon="fa fa-github colored"></md-icon>
-				</md-button>
-			</div>
-		</md-toolbar>
 		<div flex="100">
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2 md-truncate flex>{{p.name}}</h2>
+					<md-button ng-href="{{p.github}}" target="_blank">
+						View on GitHub
+						<md-icon md-font-icon="fa fa-github colored"></md-icon>
+					</md-button>
+				</div>
+			</md-toolbar>
+		</div>
+		<div flex="50">
 			Platforms: <em>{{p.platforms}}</em>
+		</div>
+		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
+			Languages: <span ng-repeat="lang in p.languages">{{lang.name}}{{$last ? '' : ', '}}</span>
 		</div>
 		<div flex="100">
 			<p>
@@ -27,9 +29,6 @@
 					<img class="screenshot" ng-src="{{s.src}}" md-ink-ripple ng-click="showDialog($event,s)"/>
 				</div>
 			</div>
-		</div>
-		<div flex="100">
-			<md-divider></md-divider>
 		</div>
 	</div>
 </div>
