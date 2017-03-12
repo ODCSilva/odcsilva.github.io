@@ -342,7 +342,8 @@ function ($scope, $mdDialog, $mdMedia, LanguageService) {
 			description: "A web app that allows you to create, read, update, and delete notes using the Microsoft's OneNote REST API.",
 			languages: [LanguageService.html5, LanguageService.css3, LanguageService.js, LanguageService.jquery],
 			platforms: "Web",
-			github: "https://github.com/ODCSilva/Note2"
+			github: "https://github.com/ODCSilva/Note2",
+			demo: "demos/note2/"
 		}
 	];
 
