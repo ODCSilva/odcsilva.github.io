@@ -56,3 +56,8 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# other
+css/styles.css
+scripts/scripts.js
+gulpfile.js
