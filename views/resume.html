@@ -1,55 +1,57 @@
-<h1 md-colors="{color:'primary'}" class="section-header">Experience & Education</h1>
-<h2 md-colors="{color:'primary'}" class="section-header subheader">Experience</h2>
-<div ng-controller="ExperienceController">
-	<div layout="row" layout-wrap ng-repeat="job in jobs" class="resume-panel">
-		<div flex="50" flex-xs="100">
-			<span class="job-title">{{job.title}}</span>
-		</div>
-		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}"  flex-xs="100">
-			{{job.dates}}
-		</div>
-		<div flex="50" flex-xs="100">
-			<em>{{job.company}}</em>
-		</div>
-		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
-			<em>{{job.location}}</em>
-		</div>
-		<div flex="100">
-			<ul class="experience-list">
-				<li ng-repeat="d in job.duties">
-					{{d.text}}
-				</li>
-			</ul>
+<div layout="column" layout-padding>
+	<h1 md-colors="{color:'primary'}" class="section-header">Experience & Education</h1>
+	<h2 md-colors="{color:'primary'}" class="section-header subheader">Experience</h2>
+	<div ng-controller="ExperienceController">
+		<div layout="row" layout-wrap ng-repeat="job in jobs" class="resume-panel">
+			<div flex="50" flex-xs="100">
+				<span class="job-title">{{job.title}}</span>
+			</div>
+			<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}"  flex-xs="100">
+				{{job.dates}}
+			</div>
+			<div flex="50" flex-xs="100">
+				<em>{{job.company}}</em>
+			</div>
+			<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
+				<em>{{job.location}}</em>
+			</div>
+			<div flex="100">
+				<ul class="experience-list">
+					<li ng-repeat="d in job.duties">
+						{{d.text}}
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
-<h2 md-colors="{color:'primary'}" class="section-header subheader">Education</h2>
-<div ng-controller="ExperienceController">
-	<div layout="row" layout-wrap ng-repeat="edu in education" class="resume-panel">
-		<div flex="50">
-			<span class="job-title">{{edu.program}}</span>
-		</div>
-		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
-			{{edu.dates}}
-		</div>
-		<div flex="50">
-			<em>{{edu.institution}}</em>
-		</div>
-		<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
-			<em>{{edu.location}}</em>
-		</div>
-		<div flex="100">
-			<ul class="experience-list">
-				<li ng-repeat="ach in edu.achievments">
-					{{ach.text}}
-				</li>
-			</ul>
-			<h4 ng-hide="edu.courses == undefined">Courses</h4>
-			<ul class="experience-list" ng-hide="edu.courses == undefined">
-				<li ng-repeat="cor in edu.courses | orderBy:'code'">
-					{{cor.code}} - {{cor.name}}
-				</li>
-			</ul>
+	<h2 md-colors="{color:'primary'}" class="section-header subheader">Education</h2>
+	<div ng-controller="ExperienceController">
+		<div layout="row" layout-wrap ng-repeat="edu in education" class="resume-panel">
+			<div flex="50">
+				<span class="job-title">{{edu.program}}</span>
+			</div>
+			<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
+				{{edu.dates}}
+			</div>
+			<div flex="50">
+				<em>{{edu.institution}}</em>
+			</div>
+			<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
+				<em>{{edu.location}}</em>
+			</div>
+			<div flex="100">
+				<ul class="experience-list">
+					<li ng-repeat="ach in edu.achievments">
+						{{ach.text}}
+					</li>
+				</ul>
+				<h4 ng-hide="edu.courses == undefined">Courses</h4>
+				<ul class="experience-list" ng-hide="edu.courses == undefined">
+					<li ng-repeat="cor in edu.courses | orderBy:'code'">
+						{{cor.code}} - {{cor.name}}
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

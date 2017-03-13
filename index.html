@@ -43,7 +43,7 @@
 				<md-divider></md-divider>
 			</div>
 
-			<div flex ng-controller="TabController">
+			<div flex ng-controller="TabController" class="content-frame">
 				<md-tabs md-dynamic-height md-border-bottom md-center-tabs md-selected="selectedIndex">
 					<md-tab ng-repeat="section in sections">
 						<md-tab-label>
@@ -58,6 +58,17 @@
 					</md-tab>
 				</md-tabs>
 			</div>
+			<footer flex="100">
+					<div layout="row" class="footer">
+						<div flex="50">
+							<small>© 2017 Omar Silva.</small>
+						</div>
+						<div flex="50" style="text-align: right">
+							<small>Made with</small>
+							<md-icon md-font-icon="devicon-angularjs-plain-wordmark colored" style="font-size: 92px"></md-icon>
+						</div>
+					</div>
+			</footer>
 		</div>
 	</div>
 

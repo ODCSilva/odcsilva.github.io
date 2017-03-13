@@ -58,6 +58,9 @@ md-toolbar.project._md._md-toolbar-transitions {
 	background-color: rgba(0,0,0,0);
 	color: inherit;
 }
+.content-frame {
+
+}
 div.md-toolbar-tools.project {
 	max-height: 52px;
 	height: 52px;
@@ -67,6 +70,12 @@ div.md-toolbar-tools.project {
 }
 .project-icon {
 	font-size: 48px;
+}
+.footer {
+	background-color: rgb(24,24,24);
+	padding: 16px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 }
 .resume-panel {
 	margin-bottom: 16px;

@@ -81,16 +81,14 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 .controller("SectionController", function($scope) {
 	$scope.sections = [
 		{
-			name: "About",
-			icon_name: "fa-user",
+			name: "Home",
+			icon_name: "fa-home",
 			icon_set: "fa",
-			contents: "Hello"
 		},
 		{
 			name: "Programming Languages",
 			icon_name: "fa-code",
 			icon_set: "fa",
-			contents: "Hello"
 		},
 		{
 			name: "Projects",
@@ -179,8 +177,8 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ngRoute','ngAnimate'])
 
 	$scope.sections = [
 		{
-			name: "About",
-			icon_name: "fa fa-user",
+			name: "Home",
+			icon_name: "fa fa-home",
 			src: "views/about.html"
 		},
 		{
