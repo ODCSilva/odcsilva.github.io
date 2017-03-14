@@ -354,7 +354,8 @@ function ($scope, $mdDialog, $mdMedia, LanguageService) {
 			screenshots: [
 				{ src: "assets/img/projects/kinSHIFT/1.jpg"},
 				{ src: "assets/img/projects/kinSHIFT/2.jpg"},
-				{ src: "assets/img/projects/kinSHIFT/3.jpg"}
+				{ src: "assets/img/projects/kinSHIFT/3.jpg"},
+				{ src: "assets/img/projects/kinSHIFT/4.jpg"}
 			]
 		},
 		{
