@@ -58,9 +58,6 @@ md-toolbar.project._md._md-toolbar-transitions {
 	background-color: rgba(0,0,0,0);
 	color: inherit;
 }
-.content-frame {
-
-}
 div.md-toolbar-tools.project {
 	max-height: 52px;
 	height: 52px;
@@ -81,6 +78,8 @@ div.md-toolbar-tools.project {
 	margin-bottom: 16px;
 }
 .screenshot {
+	display: block;
+	height: auto;
 	width: 95%;
 }
 .screenshot-full {
@@ -91,6 +90,7 @@ div.md-toolbar-tools.project {
 	border: 1px solid rgba(255,255,255,0.12);
 	background-color: rgb(24,24,24);
 	border-radius: 4px;
+	overflow: hidden;
 }
 .section-header {
 	font-family: 'Oswald', 'Open Sans', 'Roboto', sans-serif;

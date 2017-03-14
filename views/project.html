@@ -4,7 +4,7 @@
 		<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel">
 			<div flex="100" class="project-frame" md-colors="{backgroundColor:'grey-800'}">
 				<div flex="100" style="position: relative">
-					<a ng-href="{{p.github}}" target="_blank" style="position: absolute; top: 0; right: 0">
+					<a ng-href="{{p.github}}" target="_blank" style="position: absolute; top: 0; right: 0" ng-hide="p.github == null">
 						<img src="assets/img/view-on-github-ribbon.png"/>
 					</a>
 					<md-toolbar class="project">
