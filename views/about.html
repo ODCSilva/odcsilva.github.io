@@ -4,31 +4,38 @@
 		<h1 md-colors="{color:'primary'}" class="section-header">Welcome</h1>
 	</div>
 	<div flex>
-		<p>
-			Welcome to my portfolio!
-		</p>
-		<p>
-			I am a software developer and designer living in Dartmouth, Nova Scotia, Canada. I
-			was born and raised in Puerto Rico, where I lived for 27 years prior to moving to Canada.
-			I am currently in my second (and last) year at the Nova Scotia Community College as a student of Information Technology
-			with a programming concentration.
-		</p>
-		<p>
-			In this portfolio you can learn more about my <a ui-sref="skills" class="about-link">Skills</a> as well as some of
-			<a ui-sref="projects" class="about-link">Projects</a>
-			I've been involved in, either as a professional or as a student at NSCC. Expect this
-			portfolio to grow and change as it reflects
-			my newly found knowledge and experience as a software developer. In the
-			<a ui-sref="experience" class="about-link">Experience & Education</a> section, as the name implies, you can find more about
-			my work experience, education and other acolades. You can also download an up-to-date copy of my resume.
-			And finally, if you wish to contact me with any relevant inquiries, the
-			<a ui-sref="contact" class="about-link">Contact</a> section has all the information you need to do so.
-		</p>
-		<p>
-			Enjoy!
-		</p>
+		<div layout="row" layout-wrap>
+			<div flex="66" flex-xs="100">
+				<p>
+					Welcome to my portfolio!
+				</p>
+				<p>
+					I am a software developer and designer living in Dartmouth, Nova Scotia, Canada. I
+					was born and raised in Puerto Rico, where I lived for 27 years prior to moving to Canada.
+					I am currently in my second (and last) year at the Nova Scotia Community College as a student of Information Technology
+					with a programming concentration.
+				</p>
+				<p>
+					In this portfolio you can learn more about my <a ui-sref="skills" class="about-link">Skills</a> as well as some of the
+					<a ui-sref="projects" class="about-link">Projects</a>
+					I've been involved in, either as a professional or as a student at NSCC. Expect this
+					portfolio to grow and change as it reflects
+					my newfound knowledge and experience as a software developer. In the
+					<a ui-sref="experience" class="about-link">Experience & Education</a> section, as the name implies, you can find more about
+					my work experience, education and other acolades. You can also download an up-to-date copy of my resume.
+					And finally, if you wish to contact me with any relevant inquiries, the
+					<a ui-sref="contact" class="about-link">Contact</a> section has all the information you need to do so.
+				</p>
+				<p>
+					Enjoy!
+				</p>
+			</div>
+			<div flex="33" flex-xs="100">
+				<img src="assets/img/me.jpg" class="my-face"/>
+			</div>
+		</div>
 	</div>
-	<div flex>
+	<!-- <div flex>
 		<h1 md-colors="{color:'primary'}" class="section-header subheader">About me</h1>
 	</div>
 	<div flex>
@@ -45,5 +52,5 @@
 			problems and use my skills to overcome them. I have an insatiable thirst to
 			learn about new technologies and applying them in future endeavors.
 		</p>
-	</div>
+	</div> -->
 </div>

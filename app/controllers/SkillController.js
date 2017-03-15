@@ -65,6 +65,22 @@ app.controller("SkillController", function($scope, $mdMedia) {
 				{ name: "GitHub" }
 			]
 		},{
+			name: "Programing & Scripting Languages",
+			icon: "fa fa-code",
+			skills: [
+				{ name: "C++" },
+				{ name: "C#" },
+				{ name: "CSS3" },
+				{ name: "HTML5" },
+				{ name: "Java" },
+				{ name: "JavaScript" },
+				{ name: "jQuery" },
+				{ name: "JSON" },
+				{ name: "PHP" },
+				{ name: "Python" },
+				{ name: "XML" }
+			]
+		},{
 			name: "Project Management",
 			icon: "fa fa-refresh",
 			skills: [
@@ -83,7 +99,7 @@ app.controller("SkillController", function($scope, $mdMedia) {
 			]
 		},{
 			name: "Other Skills",
-			icon: "fa fa-paint-brush", 
+			icon: "fa fa-paint-brush",
 			skills: [
 				{ name: "Fluent in English and Spanish"}
 			]
