@@ -1,7 +1,7 @@
 <div layout="column" layout-padding ng-cloak>
 	<h1 md-colors="{color:'primary'}" class="md-display-1 section-header">Projects</h1>
 	<div ng-controller="ProjectController">
-		<div layout="row" layout-wrap ng-repeat="p in projects" class="resume-panel">
+		<div layout="row" layout-wrap ng-repeat="p in projects | orderBy:'name'" class="resume-panel">
 			<div flex="100" class="project-frame" md-colors="{backgroundColor:'grey-800'}" md-whiteframe="6">
 				<div flex="100" style="position: relative">
 					<a ng-href="{{p.github}}" target="_blank" style="position: absolute; top: 0; right: 0" ng-hide="p.github == null">

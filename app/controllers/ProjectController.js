@@ -136,6 +136,29 @@ app.controller("ProjectController", function ($scope, $mdDialog, $mdMedia, Langu
 				{ src: "assets/img/projects/awesome-chat-ui/2.jpg"}
 			],
 			github: "https://github.com/ODCSilva/AwesomeChatUI/"
+		},
+		{
+			name: "Note2: App",
+			description: "A C# version of the Note2 web app for the Universal Windows Platform. It contains the same functionality as the web app, but it doesn't use the OneNote API. Notes are saved to a text file using Windows.Storage StorageFile and StorageFolder classes in JSON format, and serialized into note models. Unit tests were also written for several of the main classes.",
+			languages: [LanguageService.csharp],
+			platforms: "Windows (UWP)",
+			screenshots: [
+				{ src: "assets/img/projects/note2app/1.jpg"},
+				{ src: "assets/img/projects/note2app/2.jpg"},
+				{ src: "assets/img/projects/note2app/3.jpg"},
+			],
+			github: "https://github.com/ODCSilva/Note2App/"
+		},
+		{
+			name: "Morse Torch",
+			description: "An app I made for Android that translates text into Morse code. If there's a camera flash present, it will flash as the text is being translated.",
+			languages: [LanguageService.java],
+			platforms: "Android (Minimum SDK is 21)",
+			screenshots: [
+				{ src: "assets/img/projects/morse-torch/1.jpg"},
+				{ src: "assets/img/projects/morse-torch/2.jpg"}
+			],
+			github: "https://github.com/ODCSilva/MorseTorch/"
 		}
 	];
 
