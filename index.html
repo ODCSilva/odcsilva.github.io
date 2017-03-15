@@ -34,12 +34,10 @@
 
 	<div layout="row" ng-cloak layout-align="center start">
 		<div layout="column" flex class="main-container" layout-padding>
-
 			<div flex>
 				<img class="logo" src="assets/img/logo.svg">
 				<md-divider></md-divider>
 			</div>
-
 			<div flex ng-controller="TabController" class="content-frame">
 				<md-tabs md-dynamic-height md-border-bottom md-center-tabs >
 					<md-tab ng-repeat="section in sections" ui-sref="{{section.sref}}" md-active="$state.is(section.sref)">

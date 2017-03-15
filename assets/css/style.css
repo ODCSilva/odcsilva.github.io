@@ -179,3 +179,12 @@ a.md-button.md-ink-ripple {
 .resume-parent {
 	position: relative;
 }
+.header-background {
+	background-color: red;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: block;
+	height: 255px;
+}
