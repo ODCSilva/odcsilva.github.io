@@ -23,6 +23,13 @@ html {
     font-size: 20px !important;
     color: rgba(255,255,255,1.0);
 }
+a.about-link {
+	color: #FF9800;
+	text-decoration: none;
+}
+a.about-link:visited {
+	color: #FF9800;
+}
 .contact-info {
 	list-style-type: none;
 }

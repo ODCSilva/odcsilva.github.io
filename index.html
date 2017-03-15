@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-	<title></title>
+	<title>Omar Silva - Portfolio</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:300|Roboto:300,400,400i,500,700" rel="stylesheet">
 
 	<!-- Devicon CDN -->
@@ -17,23 +17,21 @@
 </head>
 <body ng-app="MyPortfolio">
 
-	<!-- <div ng-controller="SidenavController" layout="row" layout-align="end start" ng-cloak>
-		<md-content>
-			<md-button ng-click="openRightMenu()" class="md-icon-button md-primary sidenav-button" aria-label="Expand Sidenav">
-				<md-icon hide show-xs md-font-set="fa" md-font-icon="fa-bars"></md-icon>
-			</md-button>
-		</md-content>
+	<div ng-controller="SidenavController" layout="row" layout-align="end start" ng-cloak>
+		<md-button ng-click="openRightMenu()" class="md-icon-button md-primary sidenav-button" aria-label="Expand Sidenav">
+			<md-icon md-font-set="fa" md-font-icon="fa-bars"></md-icon>
+		</md-button>
 		<md-sidenav md-component-id="right" class="md-sidenav-right">
 			<md-content>
 				<md-list>
-					<md-list-item class="md-1-line" ng-repeat="link in links" ng-click="null">
-						<md-icon md-font-set="{{ link.icon_set }}" md-font-icon="{{ link.icon_name }}"></md-icon>
+					<md-list-item class="md-1-line" ng-repeat="link in links" ui-sref="{{link.sref}}" ng-click="openRightMenu()">
+						<md-icon md-font-icon="{{ link.icon_name }}"></md-icon>
 						<p>{{ link.name }}</p>
 					</md-list-item>
 				</md-list>
 			</md-content>
 		</md-sidenav>
-	</div> -->
+	</div>
 
 	<div layout="row" ng-cloak layout-align="center start">
 		<div layout="column" flex class="main-container" layout-padding>
@@ -44,17 +42,17 @@
 			</div>
 
 			<div flex ng-controller="TabController" class="content-frame">
-				<md-tabs md-dynamic-height md-border-bottom md-center-tabs md-selected="selectedIndex">
-					<md-tab ng-repeat="section in sections">
+				<md-tabs md-dynamic-height md-border-bottom md-center-tabs >
+					<md-tab ng-repeat="section in sections" ui-sref="{{section.sref}}" md-active="$state.is(section.sref)">
 						<md-tab-label>
 							<md-icon md-font-icon="{{ section.icon_name }}"></md-icon>
 							<span flex hide-xs>
 								{{section.name}}
 							</span>
 						</md-tab-label>
-						<md-tab-body>
-							<div ng-include src='section.src'></div>
-						</md-tab-body>
+						<md-tab-body><div ng-include="section.template">
+
+						</div></md-tab-body>
 					</md-tab>
 				</md-tabs>
 			</div>
@@ -78,14 +76,9 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
-
+	<script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<!-- Angular Material Library -->
 	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
-
-	<!-- <script src="app/app.js"></script>
-	<script src="app/controllers/SkillController.js"></script> -->
 	<script src="scripts/scripts.min.js"></script>
 </body>
 </html>

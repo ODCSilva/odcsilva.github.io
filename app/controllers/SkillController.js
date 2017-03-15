@@ -1,4 +1,4 @@
-app.controller("SkillController", ['$scope', '$mdMedia', function($scope, $mdMedia) {
+app.controller("SkillController", function($scope, $mdMedia) {
     $scope.$mdMedia = $mdMedia;
 	$scope.skillCategories = [
 		{
@@ -23,7 +23,7 @@ app.controller("SkillController", ['$scope', '$mdMedia', function($scope, $mdMed
 				icon_name: "devicon-laravel-plain colored"
 			}]
 		},{
-			name: "Graphic Design",
+			name: "Graphics Design",
 			skills: [{
 				name: "Adobe Photoshop",
 				icon_name: "devicon-photoshop-plain colored"
@@ -75,4 +75,4 @@ app.controller("SkillController", ['$scope', '$mdMedia', function($scope, $mdMed
 			}]
 		}
 	];
-}]);
+});
