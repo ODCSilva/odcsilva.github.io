@@ -2,8 +2,8 @@
 	<h1 md-colors="{color:'primary'}" class="section-header">Experience & Education</h1>
 	<h2 md-colors="{color:'primary'}" class="section-header subheader">Experience</h2>
 	<div ng-controller="ExperienceController">
-		<div layout="column" layout-padding ng-repeat="job in jobs" class="resume-panel">
-			<div layout="row" layout-wrap class="project-frame" md-whiteframe="6" md-colors="{backgroundColor:'grey-800'}">
+		<div layout="column" ng-repeat="job in jobs" class="resume-panel">
+			<div layout="row" layout-wrap layout-padding class="project-frame" md-whiteframe="6" md-colors="{backgroundColor:'grey-800'}">
 				<div flex="50" flex-xs="100">
 					<span class="job-title">{{job.title}}</span>
 				</div>
@@ -28,8 +28,8 @@
 	</div>
 	<h2 md-colors="{color:'primary'}" class="section-header subheader">Education</h2>
 	<div ng-controller="ExperienceController">
-		<div layout="column" layout-padding ng-repeat="edu in education" class="resume-panel">
-			<div layout="row" layout-wrap class="project-frame" md-whiteframe="6" md-colors="{backgroundColor:'grey-800'}">
+		<div layout="column" ng-repeat="edu in education" class="resume-panel">
+			<div layout="row" layout-wrap layout-padding class="project-frame" md-whiteframe="6" md-colors="{backgroundColor:'grey-800'}">
 				<div flex="50">
 					<span class="job-title">{{edu.program}}</span>
 				</div>

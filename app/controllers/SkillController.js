@@ -73,6 +73,15 @@ app.controller("SkillController", function($scope, $mdMedia) {
 				name: "GitHub",
 				icon_name: "devicon-github-plain colored"
 			}]
+		},{
+			name: "Other",
+			skills: [{
+				name: "Node.js",
+				icon_name: "devicon-nodejs-plain colored"
+			},{
+				name: "Gulp.js",
+				icon_name: "devicon-gulp-plain colored"
+			}]
 		}
 	];
 });

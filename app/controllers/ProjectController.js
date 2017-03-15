@@ -83,6 +83,59 @@ app.controller("ProjectController", function ($scope, $mdDialog, $mdMedia, Langu
 				{ src: "assets/img/projects/star-trivia/5.jpg"}
 			],
 			github: "https://github.com/ODCSilva/StarTrivia/"
+		},
+		{
+			name: "Laravel CMS",
+			description: "A basic CMS made with Laravel, PHP, and Bootstrap. Allows for full CRUD functionality for pages, articles, sections, and custom CSS templates. User permissions allows for user to be assigned to editorial or administrative duties.",
+			languages: [LanguageService.php],
+			platforms: "Web",
+			screenshots: [
+				{ src: "assets/img/projects/laravel-cms/1.jpg"},
+				{ src: "assets/img/projects/laravel-cms/2.jpg"},
+				{ src: "assets/img/projects/laravel-cms/3.jpg"},
+				{ src: "assets/img/projects/laravel-cms/4.jpg"},
+				{ src: "assets/img/projects/laravel-cms/5.jpg"}
+			],
+			github: "https://github.com/ODCSilva/Laravel-CMS"
+		},
+		{
+			name: "Heroes of Pyth",
+			description: "Heroes of Pyth is a turn-based, player-vs-player game where players pit their randomly generated characters against each other. The winning player will get the chance to save his character on a file for later use.",
+			languages: [LanguageService.python],
+			platforms: "Windows, Linux",
+			screenshots: [
+				{ src: "assets/img/projects/heroes-of-pyth/1.jpg"},
+				{ src: "assets/img/projects/heroes-of-pyth/2.jpg"},
+				{ src: "assets/img/projects/heroes-of-pyth/3.jpg"},
+				{ src: "assets/img/projects/heroes-of-pyth/4.jpg"},
+				{ src: "assets/img/projects/heroes-of-pyth/5.jpg"},
+				{ src: "assets/img/projects/heroes-of-pyth/6.jpg"}
+			],
+			github: "https://github.com/ODCSilva/Heroes-of-Pyth"
+		},
+		{
+			name: "Awesome Chat",
+			description: "A synchronous chat client/server written in C#. The chat can be run in server mode by using the -server command-line parameter. Only supports one client at a time. The program uses System.Net.Sockets TcpClient and TcpListener classes in a single thread for communication.",
+			languages: [LanguageService.csharp],
+			platforms: "Windows",
+			screenshots: [
+				{ src: "assets/img/projects/awesome-chat/1.jpg"},
+				{ src: "assets/img/projects/awesome-chat/2.jpg"},
+				{ src: "assets/img/projects/awesome-chat/3.jpg"},
+				{ src: "assets/img/projects/awesome-chat/4.jpg"}
+			],
+			github: "https://github.com/ODCSilva/AwesomeChat/"
+		},
+		{
+			name: "Awesome Chat UI",
+			description: "A UI version of the console-based client. Handles connection asynchronously using multi-threading. Logs chat sessions using a custom-build logging library that implements a logging interface. Uses Ninject for dependency injection in order to support additional, custom-build logging libraries.",
+			languages: [LanguageService.csharp],
+			platforms: "Windows",
+			screenshots: [
+				{ src: "assets/img/projects/awesome-chat-ui/1.jpg"},
+				{ src: "assets/img/projects/awesome-chat-ui/2.jpg"}
+			],
+			github: "https://github.com/ODCSilva/AwesomeChatUI/"
 		}
 	];
 

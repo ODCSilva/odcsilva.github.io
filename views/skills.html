@@ -1,31 +1,15 @@
-<div flex layout="column" layout-padding>
-	<div flex ng-controller="LanguageController">
-		<h1 md-colors="{color:'primary'}" class="section-header">Programming Languages</h1>
-		<md-list flex layout="row" layout-wrap layout-padding>
-			<md-list-item class="md-2-line" ng-repeat="lang in languages | orderBy:'name'" flex="25">
-				<div layout="row" flex layout-xs="column">
-					<md-icon class="project-icon" md-font-icon="{{lang.icon_name}}" flex="33" flex-xs="100"></md-icon>
-					<div class="md-list-item-text" flex="66" hide-xs>
-						<h3>{{lang.name}}</h3>
-					</div>
-				</div>
-			</md-list-item>
-		</md-list>
-	</div>
-	<div flex ng-controller="SkillController">
+<div flex layout="row" layout-padding layout-wrap ng-controller="SkillController">
+	<div flex="100">
 		<h1 md-colors="{color:'primary'}" class="section-header">Skills</h1>
-		<div flex layout="column" ng-repeat="cat in skillCategories | orderBy:'name'" layout-padding>
-			<md-subheader md-colors="{color:'grey-50'}" class="md-no-sticky section-header subsubheader" flex="100">{{cat.name}}</md-subheader>
-			<md-list flex layout="row" layout-wrap layout-padding>
-				<md-list-item class="md-2-line" ng-repeat="skill in cat.skills | orderBy:'name'" flex="25">
-					<div layout="row" flex layout-xs="column">
-						<md-icon class="project-icon" md-font-icon="{{skill.icon_name}}" flex="33" flex-xs="100"></md-icon>
-						<div class="md-list-item-text" flex="66" hide-xs>
-							<h3 hide-xs flex>{{skill.name}}</h3>
-						</div>
-					</div>
-				</md-list-item>
-			</md-list>
+	</div>
+	<div flex="33" flex-xs="100" flex-sm="50" ng-repeat="cat in skillCategories | orderBy:'name'">
+		<div flex class="project-frame md-padding" md-colors="{backgroundColor:'grey-800'}" layout-fill>
+			<h1 md-colors="{color:'grey-50'}" class="job-title">{{cat.name}}</h1>
+			<ul ng-repeat="skill in cat.skills" class="skill-list">
+				<li>
+					{{skill.name}}
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

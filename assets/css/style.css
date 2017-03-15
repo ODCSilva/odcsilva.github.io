@@ -152,3 +152,8 @@ h2.ng-binding.flex {
 a.md-button.md-ink-ripple {
 	color: rgb(255,255,255) !import;
 }
+.skill-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 auto;
+}
