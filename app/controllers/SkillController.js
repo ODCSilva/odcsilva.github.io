@@ -3,85 +3,90 @@ app.controller("SkillController", function($scope, $mdMedia) {
 	$scope.skillCategories = [
 		{
 			name: "Databases",
-			skills: [{
-				name: "MySQL",
-				icon_name: "devicon-mysql-plain colored colored"
-			},{
-				name: "Oracle",
-				icon_name: "devicon-oracle-original colored"
-			}]
+			icon: "fa fa-database",
+			skills: [
+				{ name: "MySQL" },
+				{ name: "MariaDB"},
+				{ name: "Oracle"},
+				{ name: "MS Access"},
+			]
 		},{
 			name: "Frameworks",
-			skills: [{
-				name: "AngularJS",
-				icon_name: "devicon-angularjs-plain colored"
-			},{
-				name: "Bootstrap",
-				icon_name: "devicon-bootstrap-plain colored"
-			},{
-				name: "Laravel",
-				icon_name: "devicon-laravel-plain colored"
-			}]
+			icon: "fa fa-cubes",
+			skills: [
+				{ name: "AngularJS" },
+				{ name: "Bootstrap" },
+				{ name: "Laravel" }
+			]
 		},{
 			name: "Graphics Design",
-			skills: [{
-				name: "Adobe Photoshop",
-				icon_name: "devicon-photoshop-plain colored"
-			},{
-				name: "Adobe Illustrator",
-				icon_name: "devicon-illustrator-plain colored"
-			}]
+			icon: "fa fa-image",
+			skills: [
+				{ name: "Adobe Photoshop" },
+				{ name: "Adobe Illustrator" },
+				{ name: "3DS Max"},
+				{ name: "SketchUp" }
+			]
+		},{
+			name: "IDEs & Editors",
+			icon: "fa fa-file-code-o",
+			skills: [
+				{ name: "Android Studio" },
+				{ name: "Visual Studio" },
+				{ name: "Eclipse" },
+				{ name: "Atom" },
+				{ name: "JetBrains Suite" },
+				{ name: "Brackets" }
+			]
 		},{
 			name: "Operating Systems",
-			skills: [{
-				name: "Android",
-				icon_name: "devicon-android-plain colored"
-			},{
-				name: "Debian",
-				icon_name: "devicon-debian-plain colored"
-			},{
-				name: "Linux",
-				icon_name: "devicon-linux-plain"
-			},{
-				name: "Ubuntu",
-				icon_name: "devicon-ubuntu-plain colored"
-			},{
-				name: "Windows",
-				icon_name: "devicon-windows8-original colored"
-			}]
+			icon: "fa fa-desktop",
+			skills: [
+				{ name: "Android" },
+				{ name: "Debian" },
+				{ name: "Linux" },
+				{ name: "Ubuntu" },
+				{ name: "Windows" }
+			]
 		},{
 			name: "Development Platforms",
-			skills: [{
-				name: "Android",
-				icon_name: "devicon-android-plain colored"
-			},{
-				name: "Linux",
-				icon_name: "devicon-linux-plain"
-			},{
-				name: "Windows",
-				icon_name: "devicon-windows8-original colored"
-			}]
+			icon: "fa fa-terminal",
+			skills: [
+				{ name: "Android" },
+				{ name: "Linux" },
+				{ name: "Windows" }
+			]
 		},{
 			name: "Version Control",
-			skills: [{
-				name: "Bitbucket",
-				icon_name: "devicon-bitbucket-plain colored"
-			},{
-				name: "Git",
-				icon_name: "devicon-git-plain colored"
-			},{
-				name: "GitHub",
-				icon_name: "devicon-github-plain colored"
-			}]
+			icon: "fa fa-code-fork",
+			skills: [
+				{ name: "Bitbucket" },
+				{ name: "Git" },
+				{ name: "GitHub" }
+			]
 		},{
-			name: "Other",
-			skills: [{
-				name: "Node.js",
-				icon_name: "devicon-nodejs-plain colored"
-			},{
-				name: "Gulp.js",
-				icon_name: "devicon-gulp-plain colored"
-			}]
+			name: "Project Management",
+			icon: "fa fa-refresh",
+			skills: [
+				{ name: "SCRUM" },
+				{ name: "Agile Design" },
+				{ name: "UML" },
+				{ name: "Database Design and Administration" },
+				{ name: "Unit Testing" }
+			]
+		},{
+			name: "Development Tools/Misc",
+			icon: "fa fa-wrench",
+			skills: [
+				{ name: "Node.js" },
+				{ name: "Gulp.js" }
+			]
+		},{
+			name: "Other Skills",
+			icon: "fa fa-paint-brush", 
+			skills: [
+				{ name: "Fluent in English and Spanish"}
+			]
 		}
 	];
 });

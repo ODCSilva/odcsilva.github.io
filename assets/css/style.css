@@ -30,6 +30,12 @@ a.about-link {
 a.about-link:visited {
 	color: #FF9800;
 }
+.category-icon {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-size: 36px;
+}
 .contact-info {
 	list-style-type: none;
 }
@@ -59,6 +65,7 @@ a.about-link:visited {
 .project-frame {
 	border: 1px solid rgba(255,255,255,0.12);
 	border-radius: 4px;
+	position: relative;
 }
 md-toolbar.project._md._md-toolbar-transitions {
 	min-height: 0px;
