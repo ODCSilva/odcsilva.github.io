@@ -171,3 +171,11 @@ a.md-button.md-ink-ripple {
 	border-radius: 50%;
 	border: 2px solid #FF9800;
 }
+.resume-button {
+	position:absolute;
+	top: 6px;
+	right: 6px;
+}
+.resume-parent {
+	position: relative;
+}
