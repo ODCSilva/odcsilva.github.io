@@ -62,7 +62,8 @@ app.controller("SkillController", function($scope, $mdMedia) {
 			skills: [
 				{ name: "Bitbucket" },
 				{ name: "Git" },
-				{ name: "GitHub" }
+				{ name: "GitHub" },
+				{ name: "Team Foundation Server"}
 			]
 		},{
 			name: "Programing & Scripting Languages",
