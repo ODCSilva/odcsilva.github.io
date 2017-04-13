@@ -1,0 +1,21 @@
+<div layout="row" layout-wrap layout-padding class="project-frame" md-whiteframe="6" md-colors="{backgroundColor:'grey-800'}">
+	<div flex="50" flex-xs="100">
+		<span class="section-header subheader">{{job.title}}</span>
+	</div>
+	<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}"  flex-xs="100">
+		{{job.dates}}
+	</div>
+	<div flex="50" flex-xs="100">
+		<em>{{job.company}}</em>
+	</div>
+	<div flex="50" ng-class="{'align-right':$mdMedia('gt-xs')}" flex-xs="100">
+		<em>{{job.location}}</em>
+	</div>
+	<div flex="100">
+		<ul class="experience-list">
+			<li ng-repeat="d in job.duties">
+				{{d.text}}
+			</li>
+		</ul>
+	</div>
+</div>

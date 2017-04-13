@@ -1,0 +1,10 @@
+<div flex class="project-frame md-padding" md-colors="{backgroundColor:'grey-800'}" layout-fill>
+	<md-icon md-font-icon="{{category.icon}}" class="category-icon"></md-icon>
+	<h1 md-colors="{color:'primary'}" class="section-header subsubheader">{{category.name}}</h1>
+	<md-divider class="md-margin"></md-divider>
+	<ul ng-repeat="skill in category.skills | orderBy:'name'" class="skill-list">
+		<li>
+			{{skill.name}}
+		</li>
+	</ul>
+</div>
