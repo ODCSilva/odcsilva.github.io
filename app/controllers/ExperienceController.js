@@ -61,7 +61,7 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 			institution: "Nova Scotia Community College",
 			location: "Institute of Technology, Halifax, NS",
 			achievments: [
-				{ text: "Graduated on summer 2017"},
+				{ text: "Graduated summer 2017"},
 				{ text: "Maintained high academic standards throughout the entirety of the program"}
 			],
 			courses: [
