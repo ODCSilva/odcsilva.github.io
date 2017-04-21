@@ -35,33 +35,33 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 				{text: "Interacted and coordinated with relevant departments to resolve customer issues"},
 				{text: "Created and updated trouble tickets in order to track of problem status"}
 			]
-		},{
-			title: "Sales Floor Associate",
-			company: "Walmart Corp",
-			dates: "April 1999 - Janurary 2002",
-			location: "Bayamon, Puerto Rico, Unites States",
-			duties: [
-				{ text:" Greeted customers and determined their needs and wants"},
-				{ text:" Discussed type, quality and number of merchandise required for purchase"},
-				{ text:" Recommended merchandise based on individual requirements"},
-				{ text:" Advised customers on utilization and care of merchandise"},
-				{ text:" Provided advice to clients regarding particular products or services"},
-				{ text:" Explained the use and advantage of merchandise to customers"},
-				{ text:" Answered customers’ queries and concerns"},
-				{ text:" Showed the live working of merchandise"},
-				{ text:" Assisted in display of merchandise"}
-			]
-		}
+		}//,{
+		// 	title: "Sales Floor Associate",
+		// 	company: "Walmart Corp",
+		// 	dates: "April 1999 - Janurary 2002",
+		// 	location: "Bayamon, Puerto Rico, Unites States",
+		// 	duties: [
+		// 		{ text:" Greeted customers and determined their needs and wants"},
+		// 		{ text:" Discussed type, quality and number of merchandise required for purchase"},
+		// 		{ text:" Recommended merchandise based on individual requirements"},
+		// 		{ text:" Advised customers on utilization and care of merchandise"},
+		// 		{ text:" Provided advice to clients regarding particular products or services"},
+		// 		{ text:" Explained the use and advantage of merchandise to customers"},
+		// 		{ text:" Answered customers’ queries and concerns"},
+		// 		{ text:" Showed the live working of merchandise"},
+		// 		{ text:" Assisted in display of merchandise"}
+		// 	]
+		// }
 	];
 
 	$scope.education = [
 		{
 			program: "Diploma in Information Technology, Programming Concentration",
-			dates: "September 2015 - Present",
+			dates: "September 2015 - May 2017",
 			institution: "Nova Scotia Community College",
 			location: "Institute of Technology, Halifax, NS",
 			achievments: [
-				{ text: "Graduating summer 2017"},
+				{ text: "Graduated on summer 2017"},
 				{ text: "Maintained high academic standards throughout the entirety of the program"}
 			],
 			courses: [

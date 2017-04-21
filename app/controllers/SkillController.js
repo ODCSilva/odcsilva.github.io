@@ -102,7 +102,7 @@ app.controller("SkillController", function($scope, $mdMedia) {
 			name: "Other Skills",
 			icon: "fa fa-paint-brush",
 			skills: [
-				{ name: "Fluent in English and Spanish"}
+				{ name: "Bilingual (English/Spanish)"}
 			]
 		}
 	];
