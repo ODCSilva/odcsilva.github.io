@@ -39,30 +39,6 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 				{ text: "Maintained high academic standards throughout the entirety of the program"}
 			],
 			courses: [
-				{ name: "Intro Windows Administration", code: "OSYS 1200" },
-				{ name: "Technical Communications", code: "COMM 1100" },
-				{ name: "Introduction to Networking", code: "NETW 1100" },
-				{ name: "Intro to Programming - Python", code: "PROG 1102" },
-				{ name: "Website Development", code: "WEBD 1000" },
-				{ name: "Introduction to Databases", code: "DBAS 1001" },
-				{ name: "Human Relations", code: "INFT 1300" },
-				{ name: "Operating Systems - Unix", code: "OSYS 1000" },
-				{ name: "User Interface Design & Dev", code: "APPD 1001" },
-				{ name: "Database Development I", code: "DBAS 1100" },
-				{ name: "Intro Obj Oriented Programming", code: "PROG 1400" },
-				{ name: "Hardware", code: "HDWR 1100" },
-				{ name: "Project Management", code: "INFT 2100" },
-				{ name: "Web Application Development 1", code: "INET 2005" },
-				{ name: "Programming C++", code: "PROG 2100" },
-				{ name: "J2EE Development", code: "WEBD 3102" },
-				{ name: "Professional Development", code: "INFT 2000" },
-				{ name: "Mobile Application Development", code: "APPD 2000" },
-				{ name: "Data Structures", code: "PROG 2400"},
-				{ name: "Advanced OOP", code: "PROG 2200"},
-				{ name: "Rich Internet Applications", code: "WEBD 2000"},
-				{ name: "Windows Programming - C#", code: "PROG 2500"},
-				{ name: "Development Process Controls", code: "INFT 4001"},
-				{ name: "Programming Capstone", code: "INFT 3000"}
 			]
 		}
 	];
