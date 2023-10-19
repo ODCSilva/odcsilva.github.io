@@ -25,5 +25,6 @@ var app = angular.module("MyPortfolio", ['ngMaterial','ui.router'])
 	})
 	.state('contact', {
 		url: '/contact'
-	});
+	})
+	.state('brands', { url: '/brands'});
 });
