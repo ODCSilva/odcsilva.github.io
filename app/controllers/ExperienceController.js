@@ -2,9 +2,19 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 	$scope.$mdMedia = $mdMedia;
 	$scope.jobs = [
 		{
+			title: "Mobile Android Developer",
+			company: "REDspace Inc.",
+			dates: "May 2017 - July 2023 (6 years)",
+			location: "Bedford, Nova Scotia",
+			duties: [
+				{text: "Responsible for working"},
+				{text: "Worked with clients to implement new features"}
+			]
+		},
+		{
 			title: "Programmer",
 			company: "Almighty Software Company",
-			dates: "March 2016 - Present",
+			dates: "March 2016 - April 2017 (1 year)",
 			location: "Halifax, Nova Scotia",
 			duties: [
 				{text: "Oversaw development of Android based project"},
@@ -15,43 +25,7 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 				{text: "Designed data models for Android app backend"},
 				{text: "Adhered to high software quality standard"}
 			]
-		},{
-			title: "Laptop Tech Support",
-			company: "Convergys Corp.",
-			dates: "March 2009 – September 2010",
-			location: "Dartmouth, Nova Scotia",
-			duties: [
-				{text: "Provided Tier 3 to customer of AT&T Laptop Connect service"},
-				{text: "Assisted customers with their mobile service issues and coordinated with other departments"
-				+"to resolve customer issues when first-call resolution was not possible"}
-			]
-		},{
-			title: "ADSL Support Technician (Tier 3)",
-			company: "Coqui.net Corporation",
-			dates: "March 2002 – July 2005",
-			location: "Guaynabo, Puerto Rico, Unites States",
-			duties: [
-				{text: "Answered incoming calls from ADSL clients and assisted them during the troubleshooting process"},
-				{text: "Interacted and coordinated with relevant departments to resolve customer issues"},
-				{text: "Created and updated trouble tickets in order to track of problem status"}
-			]
-		}//,{
-		// 	title: "Sales Floor Associate",
-		// 	company: "Walmart Corp",
-		// 	dates: "April 1999 - Janurary 2002",
-		// 	location: "Bayamon, Puerto Rico, Unites States",
-		// 	duties: [
-		// 		{ text:" Greeted customers and determined their needs and wants"},
-		// 		{ text:" Discussed type, quality and number of merchandise required for purchase"},
-		// 		{ text:" Recommended merchandise based on individual requirements"},
-		// 		{ text:" Advised customers on utilization and care of merchandise"},
-		// 		{ text:" Provided advice to clients regarding particular products or services"},
-		// 		{ text:" Explained the use and advantage of merchandise to customers"},
-		// 		{ text:" Answered customers’ queries and concerns"},
-		// 		{ text:" Showed the live working of merchandise"},
-		// 		{ text:" Assisted in display of merchandise"}
-		// 	]
-		// }
+		}
 	];
 
 	$scope.education = [
@@ -90,22 +64,6 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 				{ name: "Development Process Controls", code: "INFT 4001"},
 				{ name: "Programming Capstone", code: "INFT 3000"}
 			]
-		},
-		{
-			program: "Adult Learning Program",
-			dates: "February 2014 - May 2015",
-			institution: "Nova Scotia Community College",
-			location: "Akerley Campus, Halifax, NS",
-			achievments: [
-				{ text: "Graduated with Honours with an average of 98%"},
-				{ text: "Received Academic Achievement and Commitment to Learning awards"}
-			]
-		},
-		{
-			program: "High School",
-			dates: "A long time ago...",
-			institution: "Luis Pales Matos High School",
-			location: "Bayamón, Puerto Rico, United States",
 		}
 	];
 });
