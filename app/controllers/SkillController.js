@@ -33,6 +33,7 @@ app.controller("SkillController", function($scope, $mdMedia) {
 			skills: [
 				{ name: "Android Studio" },
 				{ name: "Visual Studio" },
+				{ name: "Visual Studio Code" },
 				{ name: "Eclipse" },
 				{ name: "Atom" },
 				{ name: "JetBrains Suite" },
@@ -69,6 +70,7 @@ app.controller("SkillController", function($scope, $mdMedia) {
 			name: "Programing & Scripting Languages",
 			icon: "fa fa-code",
 			skills: [
+				{ name: "Kotlin" },
 				{ name: "C++" },
 				{ name: "C#" },
 				{ name: "CSS3" },
