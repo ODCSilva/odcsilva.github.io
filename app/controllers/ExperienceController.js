@@ -17,13 +17,11 @@ app.controller("ExperienceController", function ($scope, $mdMedia) {
 			dates: "March 2016 - April 2017 (1 year)",
 			location: "Halifax, Nova Scotia",
 			duties: [
-				{text: "Oversaw development of Android based project"},
-				{text: "Contributed to both source code and user interface design"},
-				{text: "Managed, coordinated, and communicated with the rest of the team to ensure project objectives were being met"},
-				{text: "Participated in daily SCRUM meetings to assess progress and keep project in focus"},
-				{text: "Participated in the development of technical specification for Android app"},
-				{text: "Designed data models for Android app backend"},
-				{text: "Adhered to high software quality standard"}
+				{text: "Spearheaded development of a health/fitness app, mastering Java and new tools from scratch in under a year."},
+				{text: "Crafted intuitive UI/UX designs, integrating APIs to deliver a responsive, user-centric experience."},
+				{text: "Partnered with stakeholders to refine features based on direct user feedback, driving iterative enhancements."},
+				{text: "Adopted testing, version control (Git), and data management practices to ensure product stability. "},
+				{text: "Presented app at tech events, gaining insights into user expectations and interactive design."}
 			]
 		}
 	];
